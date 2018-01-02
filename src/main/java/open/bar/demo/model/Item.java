@@ -1,8 +1,6 @@
 package open.bar.demo.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -12,6 +10,7 @@ public class Item {
     private int id;
     @NotNull
     private String nome;
+    @OneToOne(cascade={CascadeType.MERGE})
     private Tipo tipo;
     private double preço;
     private int quantidade;
