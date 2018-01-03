@@ -12,7 +12,7 @@ public class Item {
     private String nome;
     @OneToOne(cascade={CascadeType.MERGE})
     private Tipo tipo;
-    private double preço;
+    private double preco;
     private int quantidade;
 
     public Item(){
@@ -43,12 +43,12 @@ public class Item {
         this.tipo = tipo;
     }
 
-    public double getPreço() {
-        return preço;
+    public double getPreco() {
+        return preco;
     }
 
-    public void setPreço(double preço) {
-        this.preço = preço;
+    public void setPreco(double preco) {
+        this.preco = preco;
     }
 
     public int getQuantidade() {
