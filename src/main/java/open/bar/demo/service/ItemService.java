@@ -34,4 +34,7 @@ public class ItemService {
     public ResponseEntity<List<Item>> get(){
         return new ResponseEntity<List<Item>>(this.repository.findAll(), HttpStatus.OK);
     }
+    public ResponseEntity<List<Item>> getRanking(){
+        return new ResponseEntity<List<Item>>(this.repository.findAllByQuantidadeNotNull(), HttpStatus.OK);
+    }
 }

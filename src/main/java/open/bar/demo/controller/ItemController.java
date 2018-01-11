@@ -38,4 +38,7 @@ public class ItemController {
 
     @GetMapping
     public ResponseEntity<List<Item>> get(){ return service.get(); }
+
+    @GetMapping("/byRanking")
+    public ResponseEntity<List<Item>> getRanking(){ return service.getRanking(); }
 }
